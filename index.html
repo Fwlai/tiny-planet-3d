@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Tiny Planet 3D</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1026; touch-action: none; font-family: system-ui, sans-serif; }
+    canvas { display: block; }
+    #hud { position: fixed; top: 12px; left: 14px; color: #ffe27a; font-size: 20px; font-weight: 600; text-shadow: 0 2px 6px rgba(0,0,0,.6); user-select: none; }
+    #hint { position: fixed; top: 44px; left: 14px; color: #cfd8ff; font-size: 13px; opacity: .8; user-select: none; }
+    #stick { position: fixed; left: 24px; bottom: 28px; width: 130px; height: 130px; border-radius: 50%; background: rgba(255,255,255,.08); border: 2px solid rgba(255,255,255,.25); touch-action: none; }
+    #knob { position: absolute; left: 45px; top: 45px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,226,122,.85); }
+    #msg { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 16px; color: #fff; background: rgba(5,8,25,.65); text-align: center; font-size: 24px; }
+    #msg button { font-size: 18px; padding: 10px 22px; border-radius: 10px; border: 0; background: #ffe27a; color: #1a1a1a; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div id="hud">Stars: 0 / 0</div>
+  <div id="hint">Drag the stick (or use WASD / arrows)</div>
+  <div id="stick"><div id="knob"></div></div>
+  <div id="msg"><div>You collected all the stars!</div><button id="again">Play again</button></div>
+
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
